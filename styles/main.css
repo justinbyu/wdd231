@@ -1,8 +1,8 @@
 body {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
 header, nav, main, footer {
@@ -12,6 +12,11 @@ header, nav, main, footer {
 nav {
   display: flex;
   gap: 1rem;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #menu-toggle {

@@ -1,5 +1,3 @@
-// JS
-
 // Responsive menu toggle
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
@@ -34,6 +32,7 @@ function renderCourses(filter = "all") {
     courseList.appendChild(item);
   });
 
+  // Reduce for credits
   const totalCredits = filtered.reduce((sum, c) => sum + c.credits, 0);
   totalCreditsEl.textContent = totalCredits;
 }
