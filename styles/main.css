@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, nav, main, footer {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+  #menu-toggle {
+    display: block;
+  }
+}
+
+button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.completed {
+  font-weight: bold;
+  color: green;
+}
