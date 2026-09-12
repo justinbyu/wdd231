@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
   nav ul {
-    display: flex; /* ✅ required flex usage */
+    display: flex; /* ✅ flex usage */
     justify-content: center;
     gap: 2rem;
   }
