@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Cafe Diaz",
+    "address": "123 Market Street, Diaz",
+    "phone": "(223) 555-1111",
+    "website": "https://cafediaz.com",
+    "image": "cafe.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Desert Tours",
+    "address": "456 Sahara Road, Diaz",
+    "phone": "(223) 555-2222",
+    "website": "https://deserttours.com",
+    "image": "tours.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Oasis Hotel",
+    "address": "789 Palm Avenue, Diaz",
+    "phone": "(223) 555-3333",
+    "website": "https://oasishotel.com",
+    "image": "hotel.jpg",
+    "membership": "Member"
+  },
+  {
+    "name": "Sahara Market",
+    "address": "321 Bazaar Lane, Diaz",
+    "phone": "(223) 555-4444",
+    "website": "https://saharamarket.com",
+    "image": "market.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Nomad Travel",
+    "address": "654 Caravan Road, Diaz",
+    "phone": "(223) 555-5555",
+    "website": "https://nomadtravel.com",
+    "image": "travel.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Sunset Restaurant",
+    "address": "987 Dune Avenue, Diaz",
+    "phone": "(223) 555-6666",
+    "website": "https://sunsetrestaurant.com",
+    "image": "restaurant.jpg",
+    "membership": "Member"
+  },
+  {
+    "name": "Diaz Bookstore",
+    "address": "159 Library Street, Diaz",
+    "phone": "(223) 555-7777",
+    "website": "https://diazbooks.com",
+    "image": "bookstore.jpg",
+    "membership": "Gold"
+  }
+]
