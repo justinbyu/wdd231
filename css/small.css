@@ -1,0 +1,50 @@
+/* small.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background: #004466;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.view-toggle {
+  text-align: center;
+  margin: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.list {
+  display: block;
+}
+
+.member {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
