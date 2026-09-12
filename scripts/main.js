@@ -1,53 +1,48 @@
-const gridBtn = document.getElementById('gridBtn');
-const listBtn = document.getElementById('listBtn');
-const directory = document.getElementById('directory');
-
-// Toggle views
-gridBtn.addEventListener('click', () => {
-  directory.classList.add('grid-view');
-  directory.classList.remove('list-view');
+// Responsive menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+menuToggle.addEventListener('click', () => {
+  navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
 });
 
-listBtn.addEventListener('click', () => {
-  directory.classList.add('list-view');
-  directory.classList.remove('grid-view');
-});
-
-// Footer year and last modified
+// Dynamic year + last modified
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Fetch and display members
-async function loadMembers() {
-  try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const members = await response.json();
+// Course array
+const courses = [
+  { code: "WDD130", name: "Web Fundamentals", credits: 3, subject: "WDD", completed: true },
+  { code: "WDD131", name: "Dynamic Web Fundamentals", credits: 3, subject: "WDD", completed: false },
+  { code: "CSE110", name: "Intro to Programming", credits: 2, subject: "CSE", completed: true },
+  { code: "CSE210", name: "Programming with Classes", credits: 3, subject: "CSE", completed: false }
+];
 
-    // Clear directory before rendering
-    directory.innerHTML = '';
+const courseList = document.getElementById('course-list');
+const totalCreditsEl = document.getElementById('total-credits');
 
-    members.forEach(member => {
-      const article = document.createElement('article');
-      article.classList.add('member');
+// Render courses
+function renderCourses(filter = "all") {
+  courseList.innerHTML = "";
+  let filtered = courses.filter(c => filter === "all" || c.subject === filter);
 
-      article.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} logo">
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>📞 ${member.phone}</p>
-        <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
-        <p>Membership Level: ${member.membership}</p>
-      `;
+  filtered.forEach(course => {
+    const item = document.createElement('p');
+    item.textContent = `${course.code} - ${course.name} (${course.credits} credits)`;
+    if (course.completed) item.classList.add("completed");
+    courseList.appendChild(item);
+  });
 
-      directory.appendChild(article);
-    });
-  } catch (error) {
-    console.error('Error loading members:', error);
-    directory.innerHTML = '<p>Unable to load member directory at this time.</p>';
-  }
+  // Reduce for credits
+  const totalCredits = filtered.reduce((sum, c) => sum + c.credits, 0);
+  totalCreditsEl.textContent = totalCredits;
 }
 
-loadMembers();
+// Initial render
+renderCourses();
+
+// Filter buttons
+document.querySelectorAll("#course-filters button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    renderCourses(btn.dataset.subject);
+  });
+});

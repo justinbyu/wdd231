@@ -7,35 +7,30 @@
   <title>Chamber Directory | Diaz Chamber of Commerce</title>
   <meta name="description" content="Explore the Diaz Chamber of Commerce Directory featuring local businesses, services, and community partners. Connect with trusted members today.">
   <meta name="author" content="justindiaz">
+
+  <!-- Open Graph (single correct set, GitHub Pages domain) -->
   <meta property="og:title" content="Diaz Chamber of Commerce Directory">
-<meta property="og:description" content="Discover local businesses and community partners in the Diaz Chamber of Commerce Directory. Find services, connect with professionals, and support local commerce.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://justinbyu.github.io/wdd231/chamber/directory.html">
-<meta property="og:image" content="https://justinbyu.github.io/wdd231/chamber/images/chamber-preview.png">
+  <meta property="og:description" content="Discover local businesses and community partners in the Diaz Chamber of Commerce Directory. Connect with professionals and support local commerce.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://justinbyu.github.io/wdd231/chamber/directory.html">
+  <meta property="og:image" content="https://justinbyu.github.io/wdd231/chamber/images/chamber-preview.png">
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<!-- CSS -->
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Diaz Chamber of Commerce Directory">
-  <meta property="og:description" content="Discover local businesses and community partners in the Diaz Chamber of Commerce Directory. Find services, connect with members, and grow together.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
-  <meta property="og:image" content="https://yourdomain.com/chamber/images/chamber-preview.png">
 </head>
 <body>
   <header>
-    <h1>Diaz Chamber of Commerce</h1>
+    <!-- Demoted to H2 so only one H1 exists -->
+    <h2>Diaz Chamber of Commerce</h2>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -49,7 +44,9 @@
   </header>
 
   <main>
-    <h2>Member Directory</h2>
+    <!-- Required single H1 inside main -->
+    <h1>Diaz Chamber of Commerce Directory</h1>
+
     <section class="view-toggle">
       <button id="gridBtn" aria-label="Grid view">🔲 Grid</button>
       <button id="listBtn" aria-label="List view">📋 List</button>
@@ -66,7 +63,7 @@
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
+  <!-- ✅ Script placed at very end of body -->
   <script src="scripts/main.js"></script>
-
 </body>
 </html>
