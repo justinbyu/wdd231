@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+  nav ul {
+    display: flex; /* ✅ required flex usage */
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #directory.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  #directory.list-view {
+    display: block;
+  }
+}

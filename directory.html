@@ -2,40 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Chamber of Commerce Directory">
-  <meta name="author" content="Justin Diaz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber Directory</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/larger.css">
+
+  <!-- Title -->
+  <title>Chamber Directory | City Chamber of Commerce</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Explore the City Chamber of Commerce Directory featuring local businesses, services, and community partners. Connect with trusted members today.">
+
+  <!-- Meta Author -->
+  <meta name="author" content="justindiaz">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="City Chamber of Commerce Directory">
+  <meta property="og:description" content="Discover local businesses and community partners in the City Chamber of Commerce Directory. Find services, connect with members, and grow together.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/directory.html">
+  <meta property="og:image" content="https://yourdomain.com/images/chamber-preview.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
-    <h1>Chamber Directory</h1>
+    <h1>City Chamber of Commerce</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="view-toggle">
-      <button id="gridBtn">Grid View</button>
-      <button id="listBtn">List View</button>
-    </div>
-    <section id="members" class="grid"></section>
+    <h2>Member Directory</h2>
+    <section class="view-toggle">
+      <button id="gridBtn" aria-label="Grid view">🔲 Grid</button>
+      <button id="listBtn" aria-label="List view">📋 List</button>
+    </section>
+
+    <section id="directory" class="grid-view">
+      <article class="member">
+        <img src="images/business1.jpg" alt="Business One logo">
+        <h3>Business One</h3>
+        <p>123 Main Street, Cityville</p>
+        <p>📞 (123) 456-7890</p>
+        <a href="https://businessone.com" target="_blank" rel="noopener">Visit Website</a>
+      </article>
+
+      <article class="member">
+        <img src="images/business2.jpg" alt="Business Two logo">
+        <h3>Business Two</h3>
+        <p>456 Market Road, Cityville</p>
+        <p>📞 (987) 654-3210</p>
+        <a href="https://businesstwo.com" target="_blank" rel="noopener">Visit Website</a>
+      </article>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Justin Diaz | WDD 231</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> City Chamber of Commerce | Author: justindiaz</p>
   </footer>
 
-  <script src="js/directory.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
