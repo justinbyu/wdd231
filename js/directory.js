@@ -4,13 +4,22 @@ document.getElementById("lastModified").textContent = document.lastModified;
 
 // Fetch members
 async function loadMembers() {
-  const response = await fetch("data/members.json");
-  const members = await response.json();
-  displayMembers(members);
+  try {
+    const response = await fetch("data/members.json"); // ✅ correct path
+    if (!response.ok) throw new Error("Failed to load members.json");
+    const members = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    console.error("Error loading members:", error);
+  }
 }
 
 function displayMembers(members) {
   const container = document.getElementById("members");
+  if (!container) {
+    console.error("Missing #members element in HTML");
+    return;
+  }
   container.innerHTML = "";
 
   members.forEach(member => {
@@ -23,7 +32,7 @@ function displayMembers(members) {
       <p>${member.address}</p>
       <p>${member.phone}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
-      <p>Membership: ${member.membership}</p>
+      <p>Membership Level: ${member.membership}</p>
     `;
 
     container.appendChild(card);
