@@ -7,6 +7,15 @@
   <meta name="author" content="Justin Diaz">
   <title>Chamber of Commerce | Home</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Meta Tags (Social Media Cards) -->
+  <meta property="og:title" content="Chamber of Commerce - Supporting Local Businesses">
+  <meta property="og:description" content="Discover local businesses, upcoming community events, networking opportunities, and member spotlights in our Chamber of Commerce.">
+  <meta property="og:image" content="https://justinbyu.github.io/wdd230/chamber/images/tours.jpg">
+  <meta property="og:url" content="https://justinbyu.github.io/wdd230/chamber/index.html">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +29,7 @@
   <!-- JavaScript Files -->
   <script src="scripts/main.js" defer></script>
   <script src="scripts/weather.js" defer></script>
-  <script src="scripts/spotlights.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
 </head>
 <body>
   <header>
@@ -40,7 +49,10 @@
   </header>
 
   <main>
-    <!-- Scalable Hero Section using an <img> tag -->
+    <!-- Single H1 Element inside Main (Required by Validator) -->
+    <h1>Chamber of Commerce Home</h1>
+
+    <!-- Scalable Hero Section -->
     <section class="hero-container">
       <img src="images/tours.jpg" alt="Chamber of Commerce Community" class="hero-img" loading="eager">
       <div class="hero-cta">
