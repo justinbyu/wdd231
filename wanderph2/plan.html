@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan a Philippine trip with the WanderPH trip planner.">
+  <title>Plan a Trip | WanderPH</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="WanderPH home">
+      <span class="brand-mark">W</span>
+      <span>Wander<span>PH</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Open navigation</span>
+      ☰
+    </button>
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="explore.html">Explore</a>
+      <a class="nav-link active" href="plan.html" aria-current="page">Plan a Trip</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div>
+        <p class="eyebrow">Your turn</p>
+        <h1>Build a simple trip brief.</h1>
+        <p>Tell us what kind of trip you want. Your submitted data will be displayed on the form action page.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <form class="trip-form" action="form-action.html" method="get">
+        <fieldset>
+          <legend>Traveler details</legend>
+
+          <div class="form-grid">
+            <label>
+              Full name
+              <input name="name" type="text" required minlength="2" autocomplete="name" placeholder="Your name">
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Trip preferences</legend>
+
+          <div class="form-grid">
+            <label>
+              Preferred travel style
+              <select name="style" required>
+                <option value="">Choose one</option>
+                <option>Beach</option>
+                <option>Mountain</option>
+                <option>Culture</option>
+                <option>City</option>
+                <option>Food</option>
+                <option>Nature</option>
+              </select>
+            </label>
+
+            <label>
+              Number of days
+              <input name="days" type="number" min="1" max="30" value="4" required>
+            </label>
+
+            <label>
+              Budget level
+              <select name="budget" required>
+                <option value="">Choose one</option>
+                <option>Budget</option>
+                <option>Comfort</option>
+                <option>Premium</option>
+              </select>
+            </label>
+
+            <label>
+              Preferred region
+              <select name="region" required>
+                <option value="">Choose one</option>
+                <option>Luzon</option>
+                <option>Visayas</option>
+                <option>Mindanao</option>
+                <option>Any region</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            What would make the trip memorable?
+            <textarea name="notes" rows="5" maxlength="500" placeholder="Tell us what you want to experience..."></textarea>
+          </label>
+        </fieldset>
+
+        <label class="checkbox-label">
+          <input name="savePreference" value="yes" type="checkbox">
+          Save my travel style in this browser for my next visit.
+        </label>
+
+        <button class="button button-primary" type="submit">Create my trip brief</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WanderPH.</p>
+    <a href="explore.html">Browse destinations →</a>
+  </footer>
+</body>
+</html>

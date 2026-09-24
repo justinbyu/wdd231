@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "El Nido",
+    "region": "Luzon",
+    "province": "Palawan",
+    "type": "Beach",
+    "budget": "Premium",
+    "bestSeason": "November–May",
+    "description": "Limestone cliffs, turquoise lagoons and island-hopping routes make El Nido a classic Palawan escape.",
+    "highlight": "Big Lagoon"
+  },
+  {
+    "id": 2,
+    "name": "Coron",
+    "region": "Luzon",
+    "province": "Palawan",
+    "type": "Beach",
+    "budget": "Comfort",
+    "bestSeason": "November–May",
+    "description": "A destination for clear lagoons, dramatic islands, wreck diving and mountain viewpoints.",
+    "highlight": "Kayangan Lake"
+  },
+  {
+    "id": 3,
+    "name": "Baguio",
+    "region": "Luzon",
+    "province": "Benguet",
+    "type": "Mountain",
+    "budget": "Budget",
+    "bestSeason": "November–February",
+    "description": "A cool-weather mountain city known for pine trees, cafés, art and scenic viewpoints.",
+    "highlight": "Mines View Park"
+  },
+  {
+    "id": 4,
+    "name": "Sagada",
+    "region": "Luzon",
+    "province": "Mountain Province",
+    "type": "Mountain",
+    "budget": "Budget",
+    "bestSeason": "November–May",
+    "description": "Quiet mountain landscapes, caves, rice terraces and sunrise viewpoints create an adventurous retreat.",
+    "highlight": "Sumaguing Cave"
+  },
+  {
+    "id": 5,
+    "name": "Vigan",
+    "region": "Luzon",
+    "province": "Ilocos Sur",
+    "type": "Culture",
+    "budget": "Budget",
+    "bestSeason": "December–May",
+    "description": "Walk through a heritage city where preserved architecture, crafts and local food meet.",
+    "highlight": "Calle Crisologo"
+  },
+  {
+    "id": 6,
+    "name": "Manila",
+    "region": "Luzon",
+    "province": "Metro Manila",
+    "type": "City",
+    "budget": "Comfort",
+    "bestSeason": "December–April",
+    "description": "A busy capital with historic districts, museums, modern malls, food spots and nightlife.",
+    "highlight": "Intramuros"
+  },
+  {
+    "id": 7,
+    "name": "Cebu City",
+    "region": "Visayas",
+    "province": "Cebu",
+    "type": "City",
+    "budget": "Comfort",
+    "bestSeason": "January–May",
+    "description": "A central Visayas gateway combining urban attractions, heritage sites and access to nearby beaches.",
+    "highlight": "Magellan's Cross"
+  },
+  {
+    "id": 8,
+    "name": "Bohol",
+    "region": "Visayas",
+    "province": "Bohol",
+    "type": "Nature",
+    "budget": "Comfort",
+    "bestSeason": "December–May",
+    "description": "Discover the Chocolate Hills, rivers, wildlife and coastal scenery in one compact island trip.",
+    "highlight": "Chocolate Hills"
+  },
+  {
+    "id": 9,
+    "name": "Boracay",
+    "region": "Visayas",
+    "province": "Aklan",
+    "type": "Beach",
+    "budget": "Premium",
+    "bestSeason": "November–May",
+    "description": "Known for its powdery beach, water activities, sunsets and lively resort atmosphere.",
+    "highlight": "White Beach"
+  },
+  {
+    "id": 10,
+    "name": "Siargao",
+    "region": "Mindanao",
+    "province": "Surigao del Norte",
+    "type": "Beach",
+    "budget": "Comfort",
+    "bestSeason": "March–October",
+    "description": "An island destination with surf culture, palm-lined roads, lagoons and a relaxed community vibe.",
+    "highlight": "Cloud 9"
+  },
+  {
+    "id": 11,
+    "name": "Davao City",
+    "region": "Mindanao",
+    "province": "Davao del Sur",
+    "type": "City",
+    "budget": "Budget",
+    "bestSeason": "December–May",
+    "description": "A major southern city with food, nature attractions and easy access to mountain adventures.",
+    "highlight": "Philippine Eagle Center"
+  },
+  {
+    "id": 12,
+    "name": "Camiguin",
+    "region": "Mindanao",
+    "province": "Camiguin",
+    "type": "Nature",
+    "budget": "Budget",
+    "bestSeason": "March–May",
+    "description": "A volcanic island packed with waterfalls, springs, viewpoints and coastal scenery.",
+    "highlight": "White Island"
+  },
+  {
+    "id": 13,
+    "name": "Iloilo City",
+    "region": "Visayas",
+    "province": "Iloilo",
+    "type": "Food",
+    "budget": "Budget",
+    "bestSeason": "December–May",
+    "description": "A food and heritage destination famous for local dishes, riverfront walks and historic architecture.",
+    "highlight": "La Paz Batchoy"
+  },
+  {
+    "id": 14,
+    "name": "La Union",
+    "region": "Luzon",
+    "province": "La Union",
+    "type": "Beach",
+    "budget": "Comfort",
+    "bestSeason": "October–April",
+    "description": "A popular coastal escape combining surfing, cafés, sunsets and an easygoing weekend atmosphere.",
+    "highlight": "Urbiztondo"
+  },
+  {
+    "id": 15,
+    "name": "Bukidnon",
+    "region": "Mindanao",
+    "province": "Bukidnon",
+    "type": "Nature",
+    "budget": "Budget",
+    "bestSeason": "December–May",
+    "description": "Highland landscapes, farms and wide-open views offer a slower alternative to crowded destinations.",
+    "highlight": "Dahilayan"
+  }
+]

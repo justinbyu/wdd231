@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Philippine destinations with WanderPH.">
+  <title>Explore | WanderPH</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="WanderPH home">
+      <span class="brand-mark">W</span>
+      <span>Wander<span>PH</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Open navigation</span>
+      ☰
+    </button>
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="explore.html" aria-current="page">Explore</a>
+      <a class="nav-link" href="plan.html">Plan a Trip</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div>
+        <p class="eyebrow">15 destinations</p>
+        <h1>Explore the Philippines</h1>
+        <p>Search, filter and open any destination for more details.</p>
+      </div>
+      <div class="stats-card">
+        <strong id="destination-count">15</strong>
+        <span>destinations loaded</span>
+      </div>
+    </section>
+
+    <section class="section" id="destination-grid">
+      <div class="toolbar">
+        <label class="search-box">
+          <span>Search destinations</span>
+          <input id="search-input" type="search" placeholder="Try “beach” or “Cebu”" autocomplete="off">
+        </label>
+
+        <label class="filter-box">
+          <span>Travel style</span>
+          <select id="type-filter">
+            <option value="all">All styles</option>
+            <option value="Beach">Beach</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Culture">Culture</option>
+            <option value="City">City</option>
+            <option value="Food">Food</option>
+            <option value="Nature">Nature</option>
+          </select>
+        </label>
+      </div>
+
+      <p id="loading-message" class="status-message" role="status">Loading destinations…</p>
+      <div id="destination-list" class="destination-grid" aria-live="polite"></div>
+      <p id="empty-message" class="status-message hidden">No destinations match your search.</p>
+    </section>
+  </main>
+
+  <dialog id="destination-modal" class="destination-modal" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <div>
+        <p id="modal-type" class="eyebrow"></p>
+        <h2 id="modal-title">Destination</h2>
+      </div>
+      <button id="modal-close" class="icon-button" type="button" aria-label="Close destination details">×</button>
+    </div>
+    <div id="modal-content"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> WanderPH.</p>
+    <a href="plan.html">Plan a trip →</a>
+  </footer>
+</body>
+</html>
