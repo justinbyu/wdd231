@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diaz Chamber of Commerce connects local businesses, community members, events, and business opportunities.">
+  <meta name="author" content="Justin Diaz">
+  <meta name="theme-color" content="#063970">
+  <title>Diaz Chamber of Commerce | Home</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Diaz Chamber of Commerce home">
+      <span class="brand-mark" aria-hidden="true">D</span>
+      <span>Diaz Chamber <small>of Commerce</small></span>
+    </a>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Diaz Chamber of Commerce</h1>
+
+    <section class="hero-container" aria-labelledby="hero-title">
+      <img src="images/tours.jpg" alt="Local business and community travel experience" class="hero-img" width="1200" height="675" fetchpriority="high">
+      <div class="hero-overlay">
+        <div class="hero-cta">
+          <p class="eyebrow">Connect • Grow • Thrive</p>
+          <h2 id="hero-title">Grow Your Business With Us</h2>
+          <p>Build connections, discover local opportunities, and become part of a stronger business community.</p>
+          <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-grid" aria-label="Chamber information">
+      <section class="card events-card" aria-labelledby="events-title">
+        <div class="section-heading">
+          <p class="eyebrow">What's happening</p>
+          <h2 id="events-title">Current Events</h2>
+        </div>
+        <ul class="event-list">
+          <li><strong>Monthly Business Networking</strong><span>First Thursday • 8:00 AM</span></li>
+          <li><strong>Annual Community Expo</strong><span>October 15 • Civic Center</span></li>
+          <li><strong>Small Business Workshop</strong><span>Online • Financial planning</span></li>
+        </ul>
+      </section>
+
+      <section class="card weather-card" aria-labelledby="weather-title">
+        <div class="section-heading">
+          <p class="eyebrow">Local conditions</p>
+          <h2 id="weather-title">Current Weather</h2>
+        </div>
+        <div id="current-weather" class="current-weather" aria-live="polite">
+          <p>Loading weather data...</p>
+        </div>
+        <h3>3-Day Forecast</h3>
+        <div id="forecast" class="forecast-container" aria-live="polite"></div>
+        <p class="weather-source">Weather data provided by Open-Meteo.</p>
+      </section>
+
+      <section class="card spotlights-card" aria-labelledby="spotlights-title">
+        <div class="section-heading">
+          <p class="eyebrow">Local businesses</p>
+          <h2 id="spotlights-title">Member Spotlights</h2>
+        </div>
+        <div id="spotlight-container" class="spotlight-grid" aria-live="polite">
+          <p>Loading member spotlights...</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Diaz Chamber of Commerce</strong>
+      <p>10 Rue De La Paix, Diaz, Mali 999 • info@diazcc.org • (223) 555-2300</p>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="currentyear"></span> Diaz Chamber of Commerce • Justin Diaz • WDD 231</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
