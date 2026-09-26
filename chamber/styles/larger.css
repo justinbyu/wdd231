@@ -18,3 +18,20 @@
   .hero-container, .hero-img { min-height: 460px; }
   .hero-cta { padding: 2rem; }
 }
+/* =========================================
+   JOIN PAGE - LARGE SCREEN
+   ========================================= */
+
+@media (min-width: 700px) {
+
+  .join-layout {
+    grid-template-columns: 1.15fr .85fr;
+    align-items: start;
+  }
+
+  .membership-cards {
+    position: sticky;
+    top: 1rem;
+  }
+
+}

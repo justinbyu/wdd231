@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Thank you for joining the Diaz Chamber of Commerce.">
+
+  <meta name="author" content="Justin Diaz">
+
+  <title>
+    Thank You | Diaz Chamber of Commerce
+  </title>
+
+  <link
+    rel="icon"
+    href="images/favicon.svg"
+    type="image/svg+xml">
+
+  <link
+    rel="stylesheet"
+    href="styles/normalize.css">
+
+  <link
+    rel="stylesheet"
+    href="styles/small.css">
+
+  <link
+    rel="stylesheet"
+    href="styles/larger.css">
+
+  <script
+    src="scripts/main.js"
+    defer>
+  </script>
+
+</head>
+
+
+<body>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Diaz Chamber of Commerce home">
+
+      <span
+        class="brand-mark"
+        aria-hidden="true">
+        D
+      </span>
+
+      <span>
+        Diaz Chamber
+        <small>of Commerce</small>
+      </span>
+
+    </a>
+
+
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Open navigation">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav
+      id="nav-menu"
+      aria-label="Main navigation">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="directory.html">
+        Directory
+      </a>
+
+      <a href="join.html">
+        Join
+      </a>
+
+      <a href="discover.html">
+        Discover
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <section class="card thank-you-page">
+
+      <p class="eyebrow">
+        Application Received
+      </p>
+
+      <h1>
+        Thank You for Joining!
+      </h1>
+
+      <p>
+        Thank you for submitting your membership
+        application to the Diaz Chamber of Commerce.
+      </p>
+
+
+      <h2>
+        Submitted Information
+      </h2>
+
+
+      <div class="submitted-information">
+
+        <p>
+          <strong>First Name:</strong>
+          <span id="display-first-name"></span>
+        </p>
+
+        <p>
+          <strong>Last Name:</strong>
+          <span id="display-last-name"></span>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <span id="display-email"></span>
+        </p>
+
+        <p>
+          <strong>Mobile Phone:</strong>
+          <span id="display-phone"></span>
+        </p>
+
+        <p>
+          <strong>Organization:</strong>
+          <span id="display-organization"></span>
+        </p>
+
+        <p>
+          <strong>Submitted:</strong>
+          <span id="display-timestamp"></span>
+        </p>
+
+      </div>
+
+
+      <a
+        href="index.html"
+        class="cta-button">
+
+        Return to Home
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div>
+
+      <strong>
+        Diaz Chamber of Commerce
+      </strong>
+
+      <p>
+        10 Rue De La Paix,
+        Diaz, Mali 999 •
+        info@diazcc.org •
+        (223) 555-2300
+      </p>
+
+    </div>
+
+
+    <div class="footer-meta">
+
+      <p>
+        &copy;
+        <span id="currentyear"></span>
+        Diaz Chamber of Commerce •
+        Justin Diaz •
+        WDD 231
+      </p>
+
+      <p>
+        Last Modified:
+        <span id="lastModified"></span>
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- DISPLAY FORM DATA -->
+
+  <script>
+
+    const params =
+      new URLSearchParams(window.location.search);
+
+
+    document.getElementById("display-first-name")
+      .textContent =
+      params.get("first-name") ||
+      "Not provided";
+
+
+    document.getElementById("display-last-name")
+      .textContent =
+      params.get("last-name") ||
+      "Not provided";
+
+
+    document.getElementById("display-email")
+      .textContent =
+      params.get("email") ||
+      "Not provided";
+
+
+    document.getElementById("display-phone")
+      .textContent =
+      params.get("phone") ||
+      "Not provided";
+
+
+    document.getElementById("display-organization")
+      .textContent =
+      params.get("organization") ||
+      "Not provided";
+
+
+    const submittedTimestamp =
+      params.get("timestamp");
+
+
+    if (submittedTimestamp) {
+
+      document.getElementById(
+        "display-timestamp"
+      ).textContent =
+        new Date(
+          submittedTimestamp
+        ).toLocaleString();
+
+    } else {
+
+      document.getElementById(
+        "display-timestamp"
+      ).textContent =
+        "Not available";
+
+    }
+
+  </script>
+
+</body>
+
+</html>

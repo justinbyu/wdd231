@@ -1,2 +1,500 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Join the Diaz Chamber of Commerce."><title>Join | Diaz Chamber of Commerce</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles/normalize.css"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/larger.css"><script src="scripts/main.js" defer></script></head><body><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">D</span><span>Diaz Chamber <small>of Commerce</small></span></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation"><span></span><span></span><span></span></button><nav id="nav-menu" aria-label="Main navigation"><a href="index.html">Home</a><a href="directory.html">Directory</a><a href="join.html" class="active" aria-current="page">Join</a><a href="discover.html">Discover</a></nav></header><main><h1>Join the Diaz Chamber</h1><section class="card"><p>Become part of a business community focused on connection, growth, and local opportunity.</p><p><strong>Membership benefits:</strong> networking, business visibility, community events, and member spotlights.</p><a class="cta-button" href="mailto:info@diazcc.org?subject=Chamber%20Membership">Request Membership Information</a></section></main><footer class="site-footer"><p>&copy; <span id="currentyear"></span> Diaz Chamber of Commerce • Justin Diaz</p><p>Last Modified: <span id="lastModified"></span></p></footer></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Join the Diaz Chamber of Commerce and become part of our business community.">
+
+  <meta name="author" content="Justin Diaz">
+  <meta name="theme-color" content="#063970">
+
+  <title>Join | Diaz Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Diaz Chamber of Commerce home">
+
+      <span class="brand-mark" aria-hidden="true">D</span>
+
+      <span>
+        Diaz Chamber
+        <small>of Commerce</small>
+      </span>
+
+    </a>
+
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Open navigation">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+    <nav id="nav-menu" aria-label="Main navigation">
+
+      <a href="index.html">Home</a>
+
+      <a href="directory.html">Directory</a>
+
+      <a
+        href="join.html"
+        class="active"
+        aria-current="page">
+        Join
+      </a>
+
+      <a href="discover.html">Discover</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <h1>Join the Diaz Chamber</h1>
+
+    <section class="join-layout">
+
+      <!-- FORM -->
+      <div class="join-form card">
+
+        <div class="section-heading">
+          <p class="eyebrow">Become a member</p>
+
+          <h2>Membership Application</h2>
+
+          <p>
+            Complete the form below to become part of
+            our business community.
+          </p>
+        </div>
+
+
+        <form
+          method="get"
+          action="thankyou.html">
+
+
+          <!-- FIRST NAME -->
+          <label for="first-name">
+            First Name
+
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              title="Applicant's first name"
+              autocomplete="given-name"
+              required>
+          </label>
+
+
+          <!-- LAST NAME -->
+          <label for="last-name">
+            Last Name
+
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              title="Applicant's last name"
+              autocomplete="family-name"
+              required>
+          </label>
+
+
+          <!-- ORGANIZATIONAL TITLE -->
+          <label for="organization-title">
+            Organizational Title
+
+            <input
+              type="text"
+              id="organization-title"
+              name="organization-title"
+              title="Your organizational title"
+              autocomplete="organization-title"
+              pattern="[A-Za-z -]{7,}"
+              placeholder="Example: Manager"
+              required>
+          </label>
+
+
+          <!-- EMAIL -->
+          <label for="email">
+            Email Address
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              title="Your email address"
+              autocomplete="email"
+              placeholder="example@email.com"
+              required>
+          </label>
+
+
+          <!-- PHONE -->
+          <label for="phone">
+            Mobile Phone Number
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              title="Your mobile phone number"
+              autocomplete="tel"
+              placeholder="555-555-5555"
+              required>
+          </label>
+
+
+          <!-- ORGANIZATION -->
+          <label for="organization">
+            Business / Organization Name
+
+            <input
+              type="text"
+              id="organization"
+              name="organization"
+              title="Business or organization name"
+              autocomplete="organization"
+              required>
+          </label>
+
+
+          <!-- MEMBERSHIP -->
+          <label for="membership">
+            Membership Level
+
+            <select
+              id="membership"
+              name="membership"
+              title="Select a membership level"
+              required>
+
+              <option value="" selected disabled>
+                Select a membership level
+              </option>
+
+              <option value="np">
+                NP Membership
+              </option>
+
+              <option value="bronze">
+                Bronze Membership
+              </option>
+
+              <option value="silver">
+                Silver Membership
+              </option>
+
+              <option value="gold">
+                Gold Membership
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <!-- DESCRIPTION -->
+          <label for="description">
+            Business / Organization Description
+
+            <textarea
+              id="description"
+              name="description"
+              title="Business or organization description"
+              rows="5"></textarea>
+
+          </label>
+
+
+          <!-- TIMESTAMP -->
+          <input
+            type="hidden"
+            id="timestamp"
+            name="timestamp">
+
+
+          <!-- SUBMIT -->
+          <input
+            type="submit"
+            value="Join the Chamber"
+            class="submit-button">
+
+        </form>
+
+      </div>
+
+
+      <!-- MEMBERSHIP CARDS -->
+      <section
+        class="membership-cards"
+        aria-labelledby="membership-heading">
+
+        <h2 id="membership-heading">
+          Membership Levels
+        </h2>
+
+
+        <!-- NP -->
+        <article class="membership-card np-card">
+
+          <h3>NP Membership</h3>
+
+          <p>
+            For nonprofit organizations.
+          </p>
+
+          <button
+            type="button"
+            onclick="document.getElementById('np-modal').showModal()">
+
+            Learn More
+
+          </button>
+
+        </article>
+
+
+        <!-- BRONZE -->
+        <article class="membership-card bronze-card">
+
+          <h3>Bronze Membership</h3>
+
+          <p>
+            Basic benefits for growing businesses.
+          </p>
+
+          <button
+            type="button"
+            onclick="document.getElementById('bronze-modal').showModal()">
+
+            Learn More
+
+          </button>
+
+        </article>
+
+
+        <!-- SILVER -->
+        <article class="membership-card silver-card">
+
+          <h3>Silver Membership</h3>
+
+          <p>
+            Increased exposure and additional benefits.
+          </p>
+
+          <button
+            type="button"
+            onclick="document.getElementById('silver-modal').showModal()">
+
+            Learn More
+
+          </button>
+
+        </article>
+
+
+        <!-- GOLD -->
+        <article class="membership-card gold-card">
+
+          <h3>Gold Membership</h3>
+
+          <p>
+            Premium visibility and exclusive benefits.
+          </p>
+
+          <button
+            type="button"
+            onclick="document.getElementById('gold-modal').showModal()">
+
+            Learn More
+
+          </button>
+
+        </article>
+
+      </section>
+
+    </section>
+
+
+    <!-- MODALS -->
+
+
+    <!-- NP MODAL -->
+    <dialog id="np-modal">
+
+      <h2>NP Membership</h2>
+
+      <p>
+        NP Membership is available to nonprofit
+        organizations with no membership fee.
+      </p>
+
+      <ul>
+        <li>Networking opportunities</li>
+        <li>Community events</li>
+        <li>Nonprofit business visibility</li>
+      </ul>
+
+      <form method="dialog">
+        <button type="submit">Close</button>
+      </form>
+
+    </dialog>
+
+
+    <!-- BRONZE MODAL -->
+    <dialog id="bronze-modal">
+
+      <h2>Bronze Membership</h2>
+
+      <p>
+        Bronze membership provides basic benefits
+        for growing businesses.
+      </p>
+
+      <ul>
+        <li>Networking opportunities</li>
+        <li>Business training</li>
+        <li>Community events</li>
+        <li>Event discounts</li>
+      </ul>
+
+      <form method="dialog">
+        <button type="submit">Close</button>
+      </form>
+
+    </dialog>
+
+
+    <!-- SILVER MODAL -->
+    <dialog id="silver-modal">
+
+      <h2>Silver Membership</h2>
+
+      <p>
+        Silver membership provides additional
+        visibility and promotional opportunities.
+      </p>
+
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Additional training</li>
+        <li>Advertising opportunities</li>
+        <li>Event discounts</li>
+      </ul>
+
+      <form method="dialog">
+        <button type="submit">Close</button>
+      </form>
+
+    </dialog>
+
+
+    <!-- GOLD MODAL -->
+    <dialog id="gold-modal">
+
+      <h2>Gold Membership</h2>
+
+      <p>
+        Gold membership provides premium exposure
+        and additional Chamber benefits.
+      </p>
+
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Premium advertising</li>
+        <li>Homepage spotlight opportunities</li>
+        <li>Special events</li>
+        <li>Advanced training opportunities</li>
+      </ul>
+
+      <form method="dialog">
+        <button type="submit">Close</button>
+      </form>
+
+    </dialog>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div>
+
+      <strong>
+        Diaz Chamber of Commerce
+      </strong>
+
+      <p>
+        10 Rue De La Paix, Diaz, Mali 999 •
+        info@diazcc.org •
+        (223) 555-2300
+      </p>
+
+    </div>
+
+    <div class="footer-meta">
+
+      <p>
+        &copy;
+        <span id="currentyear"></span>
+        Diaz Chamber of Commerce •
+        Justin Diaz •
+        WDD 231
+      </p>
+
+      <p>
+        Last Modified:
+        <span id="lastModified"></span>
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- TIMESTAMP -->
+  <script>
+    document.getElementById("timestamp").value =
+      new Date().toISOString();
+  </script>
+
+</body>
+
+</html>
