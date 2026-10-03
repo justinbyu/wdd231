@@ -1,58 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Discover interesting places and attractions in Quezon City and the surrounding area.">
+<head>
+
+    <!-- =========================================
+         BASIC META INFORMATION
+    ========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Justin Diaz">
 
-    <title>Discover | Quezon City Chamber of Commerce</title>
+    <meta
+        name="description"
+        content="Discover interesting places, attractions, businesses, and destinations around Quezon City, Philippines."
+    >
 
-    <!-- Existing CSS -->
+    <title>Discover Quezon City | Chamber of Commerce</title>
+
+
+    <!-- =========================================
+         FAVICON
+    ========================================== -->
+
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <!-- =========================================
+         OPEN GRAPH / SOCIAL MEDIA
+    ========================================== -->
+
+    <meta
+        property="og:title"
+        content="Discover Quezon City | Chamber of Commerce"
+    >
+
+    <meta
+        property="og:description"
+        content="Explore interesting places, attractions, and destinations around Quezon City, Philippines."
+    >
+
+    <meta
+        property="og:image"
+        content="https://justinbyu.github.io/wdd231/chamber/images/og-image.webp"
+    >
+
+    <meta
+        property="og:url"
+        content="https://justinbyu.github.io/wdd231/chamber/discover.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+
+    <!-- =========================================
+         STYLESHEETS
+    ========================================== -->
+
     <link rel="stylesheet" href="styles/normalize.css">
+
     <link rel="stylesheet" href="styles/small.css">
+
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- Discover CSS -->
     <link rel="stylesheet" href="styles/discover.css">
 
-    <!-- Existing JavaScript -->
-    <script src="scripts/main.js" defer></script>
 
-    <!-- Discover JavaScript -->
-    <script type="module" src="scripts/discover.js"></script>
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script
+        src="scripts/main.js"
+        defer>
+    </script>
+
+    <script
+        type="module"
+        src="scripts/discover.js">
+    </script>
+
 </head>
+
 
 <body>
 
     <!-- =========================================
-         EXISTING HEADER
-         Keep your existing header here
+         HEADER
     ========================================== -->
 
     <header>
+
         <div class="site-header">
 
             <div class="brand">
+
                 <h1>Quezon City Chamber</h1>
+
                 <p>Commerce & Community</p>
+
             </div>
 
-            <button id="menu-button" aria-label="Open navigation menu">
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
                 ☰
+
             </button>
 
+
+            <!-- Navigation -->
+
             <nav id="navigation">
-                <a href="index.html">Home</a>
-                <a href="discover.html" class="active">Discover</a>
-                <a href="directory.html">Directory</a>
-                <a href="join.html">Join</a>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="discover.html"
+                    class="active"
+                    aria-current="page">
+
+                    Discover
+
+                </a>
+
+                <a href="directory.html">
+                    Directory
+                </a>
+
+                <a href="join.html">
+                    Join
+                </a>
+
             </nav>
 
         </div>
+
     </header>
 
 
@@ -62,20 +158,38 @@
 
     <main>
 
-        <h1 class="page-title">Discover Quezon City</h1>
+        <!-- Page Heading -->
 
-        <!-- Visit Message -->
-        <section id="visit-message"
-                 class="visit-message"
-                 aria-live="polite">
+        <h1 class="page-title">
+            Discover Quezon City
+        </h1>
+
+
+        <!-- =====================================
+             LOCAL STORAGE VISIT MESSAGE
+        ====================================== -->
+
+        <section
+            id="visit-message"
+            class="visit-message"
+            aria-live="polite">
+
         </section>
 
-        <!-- Discover Cards -->
-        <section id="discover-grid"
-                 class="discover-grid"
-                 aria-label="Places to discover">
 
-            <!-- JavaScript will create the 8 cards here -->
+        <!-- =====================================
+             DISCOVER GRID
+        ====================================== -->
+
+        <section
+            id="discover-grid"
+            class="discover-grid"
+            aria-label="Discover places in Quezon City">
+
+            <!--
+                The 8 cards are generated automatically
+                using discover.js
+            -->
 
         </section>
 
@@ -83,36 +197,70 @@
 
 
     <!-- =========================================
-         EXISTING FOOTER
+         FOOTER
     ========================================== -->
 
     <footer>
 
         <div class="footer-content">
 
-            <div>
-                <h2>Quezon City Chamber</h2>
-                <p>Commerce & Community</p>
+
+            <!-- Chamber Information -->
+
+            <div class="footer-info">
+
+                <h2>
+                    Quezon City Chamber
+                </h2>
+
+                <p>
+                    Commerce & Community
+                </p>
+
             </div>
 
-            <div>
-                <p>Email: info@example.com</p>
-                <p>Quezon City, Philippines</p>
+
+            <!-- Contact Information -->
+
+            <div class="footer-contact">
+
+                <p>
+                    Email:
+                    info@example.com
+                </p>
+
+                <p>
+                    Quezon City, Philippines
+                </p>
+
             </div>
 
         </div>
 
+
+        <!-- Copyright -->
+
         <p class="copyright">
-            © <span id="currentyear"></span>
+
+            ©
+            <span id="currentyear"></span>
+
             Quezon City Chamber of Commerce
+
         </p>
 
+
+        <!-- Last Modified -->
+
         <p>
+
             Last Modified:
             <span id="lastModified"></span>
+
         </p>
 
     </footer>
 
 </body>
+
 </html>
