@@ -1,0 +1,561 @@
+/* =========================================
+   WANDERPH - MAIN STYLES
+   Mobile-first CSS
+========================================= */
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background: #f7f8f6;
+  color: #17221d;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e8e5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brand > span:last-child > span {
+  color: #1e8f6f;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+  background: #17221d;
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  color: #17221d;
+}
+
+.site-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+
+  padding: 1rem 1.25rem;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e8e5;
+  z-index: 100;
+}
+
+.site-nav.open {
+  display: flex;
+}
+
+.nav-link {
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #e8f5ef;
+  color: #167457;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  display: grid;
+  gap: 2rem;
+
+  padding: 4rem 0 3rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin-bottom: 0.65rem;
+
+  color: #16805f;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero h1 {
+  max-width: 700px;
+
+  font-size: clamp(2.4rem, 9vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.hero h1 span {
+  color: #1e8f6f;
+}
+
+.hero-text {
+  max-width: 650px;
+  margin-top: 1.25rem;
+
+  color: #5b655f;
+  font-size: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 1.5rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 0.75rem 1.1rem;
+
+  border-radius: 10px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: #17221d;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background: #26362e;
+}
+
+.button-secondary {
+  background: #e7f3ed;
+  color: #176e53;
+}
+
+
+/* =========================================
+   HERO CARD
+========================================= */
+
+.hero-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e8e4;
+  border-radius: 18px;
+
+  box-shadow: 0 15px 40px rgba(23, 34, 29, 0.08);
+}
+
+.hero-art {
+  position: relative;
+  height: 260px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      160deg,
+      #d9f1e7,
+      #b8dfd0
+    );
+}
+
+.sun {
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  top: 35px;
+  right: 40px;
+
+  border-radius: 50%;
+  background: #f5c96a;
+}
+
+.island {
+  position: absolute;
+  bottom: 55px;
+
+  width: 180px;
+  height: 75px;
+
+  border-radius: 60% 45% 0 0;
+
+  background: #2e765d;
+}
+
+.island-one {
+  left: 10%;
+  transform: rotate(-5deg);
+}
+
+.island-two {
+  right: 4%;
+  width: 220px;
+
+  background: #1f604d;
+
+  transform: rotate(4deg);
+}
+
+.wave {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.wave-one {
+  bottom: -40px;
+}
+
+.wave-two {
+  bottom: -65px;
+  opacity: 0.7;
+}
+
+.hero-card-body {
+  padding: 1.4rem;
+}
+
+.card-kicker {
+  color: #16805f;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-card h2 {
+  margin-top: 0.35rem;
+
+  font-size: 1.4rem;
+}
+
+.hero-card-body p:not(.card-kicker) {
+  margin-top: 0.5rem;
+
+  color: #66716b;
+  font-size: 0.9rem;
+}
+
+.hero-card-body a {
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  color: #16805f;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-soft {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding-left: 4%;
+  padding-right: 4%;
+
+  background: #edf5f1;
+}
+
+.section-heading {
+  display: grid;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.section-heading > p {
+  max-width: 600px;
+
+  color: #637068;
+}
+
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7e2;
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(23, 34, 29, 0.05);
+}
+
+.feature-icon {
+  display: inline-grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 1rem;
+
+  border-radius: 10px;
+
+  background: #e5f4ed;
+  color: #167457;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #68736d;
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   REQUIREMENT LIST
+========================================= */
+
+.requirement-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.requirement-list > div {
+  display: grid;
+  gap: 0.35rem;
+
+  padding: 1.1rem;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7e2;
+  border-radius: 10px;
+}
+
+.requirement-list strong {
+  color: #176e53;
+}
+
+.requirement-list span {
+  color: #657069;
+  font-size: 0.9rem;
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+
+  border-radius: 4px;
+
+  background: #edf1ee;
+
+  font-family: monospace;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 2rem 4%;
+
+  background: #17221d;
+  color: #dce6e0;
+
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.8rem;
+}
+
+.site-footer a {
+  color: #8bd5b8;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE BASE
+========================================= */
+
+@media (min-width: 600px) {
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .requirement-list > div {
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+  }
+
+}
