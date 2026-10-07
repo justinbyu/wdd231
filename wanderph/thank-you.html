@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your WanderPH travel plan submission and review the preferences you selected for your Philippine adventure.">
+  <meta name="author" content="Justin Diaz">
+  <title>Your Wander Plan | WanderPH</title>
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Your Wander Plan | WanderPH">
+  <meta property="og:description" content="Review your WanderPH travel plan submission and the Philippine travel preferences you selected.">
+  <meta property="og:image" content="https://justinbyu.github.io/wdd231/wanderph/images/og-image.svg">
+  <meta property="og:url" content="https://justinbyu.github.io/wdd231/wanderph/thank-you.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/thank-you.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="WanderPH home">
+      <img src="images/favicon.svg" alt="" width="42" height="42">
+      <span>Wander<span class="brand-highlight">PH</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Open navigation</span>
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="explore.html">Explore</a>
+      <a class="nav-link" href="wonder-plan.html">Wander Plan</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="action-page">
+      <div class="action-card">
+        <p class="eyebrow">Plan received</p>
+        <h1>Your <span>Wander Plan</span></h1>
+        <p id="action-message" class="action-message"></p>
+
+        <div id="plan-summary" class="summary-grid"></div>
+
+        <div class="action-buttons">
+          <a class="button button-primary" href="explore.html">Explore more destinations</a>
+          <a class="button button-secondary" href="wonder-plan.html">Create another plan</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>© <span id="currentyear"></span> WanderPH — Justin Diaz</p>
+      <p>Philippines</p>
+    </div>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

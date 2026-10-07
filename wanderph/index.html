@@ -1,478 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <!-- =========================================
-       BASIC META INFORMATION
-  ========================================== -->
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Explore Philippine destinations with WanderPH. Discover beaches, mountains, food, culture, and unforgettable places to visit.">
-
-  <meta
-    name="author"
-    content="Justin Diaz">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Philippine destinations with WanderPH. Discover beaches, mountains, food, culture, and unforgettable places to visit.">
+  <meta name="author" content="Justin Diaz">
   <title>WanderPH | Discover the Philippines</title>
 
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
-  <!-- =========================================
-       FAVICON
-  ========================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link
-    rel="icon"
-    href="assets/favicon.svg"
-    type="image/svg+xml">
+  <meta property="og:title" content="WanderPH | Discover Philippine Destinations">
+  <meta property="og:description" content="Explore Philippine destinations with WanderPH. Discover beaches, mountains, food, culture, and unforgettable places to visit.">
+  <meta property="og:image" content="https://justinbyu.github.io/wdd231/wanderph/images/og-image.svg">
+  <meta property="og:url" content="https://justinbyu.github.io/wdd231/wanderph/index.html">
+  <meta property="og:type" content="website">
 
-
-  <!-- =========================================
-       GOOGLE FONTS
-  ========================================== -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-
-  <!-- =========================================
-       OPEN GRAPH / SOCIAL MEDIA
-  ========================================== -->
-
-  <meta
-    property="og:title"
-    content="WanderPH | Discover Philippine Destinations">
-
-  <meta
-    property="og:description"
-    content="Explore Philippine destinations with WanderPH. Discover beaches, mountains, food, culture, and unforgettable places to visit.">
-
-  <meta
-    property="og:image"
-    content="https://justinbyu.github.io/wdd231/wanderph/assets/og-image.jpg">
-
-  <meta
-    property="og:url"
-    content="https://justinbyu.github.io/wdd231/wanderph/explore.html">
-
-  <meta
-    property="og:type"
-    content="website">
-
-
-  <!-- =========================================
-       CSS
-  ========================================== -->
-
-  <link
-    rel="stylesheet"
-    href="styles/small.css">
-
-  <link
-    rel="stylesheet"
-    href="styles/large.css">
-
-
-  <!-- =========================================
-       JAVASCRIPT
-  ========================================== -->
-
-  <script
-    src="scripts/main.js"
-    defer>
-  </script>
-
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/main.js"></script>
 </head>
 
-
 <body>
-
-  <!-- =========================================
-       HEADER
-  ========================================== -->
-
   <header class="site-header">
-
-    <a
-      class="brand"
-      href="index.html"
-      aria-label="WanderPH home">
-
-      <span class="brand-mark">W</span>
-
-      <span>
-        Wander<span>PH</span>
-      </span>
-
+    <a class="brand" href="index.html" aria-label="WanderPH home">
+      <img src="images/favicon.svg" alt="" width="42" height="42">
+      <span>Wander<span class="brand-highlight">PH</span></span>
     </a>
 
-
-    <!-- Mobile Menu -->
-
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="primary-nav">
-
-      <span class="sr-only">
-        Open navigation
-      </span>
-
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Open navigation</span>
       ☰
-
     </button>
 
-
-    <!-- Navigation -->
-
-    <nav
-      id="primary-nav"
-      class="site-nav"
-      aria-label="Primary navigation">
-
-      <a
-        class="nav-link active"
-        href="index.html"
-        aria-current="page">
-
-        Home
-
-      </a>
-
-      <a
-        class="nav-link"
-        href="explore.html">
-
-        Explore
-
-      </a>
-
-      <a
-        class="nav-link"
-        href="wonder%20plan.html">
-
-        Wander Plan
-
-      </a>
-
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+      <a class="nav-link" href="explore.html">Explore</a>
+      <a class="nav-link" href="wonder-plan.html">Wander Plan</a>
     </nav>
-
   </header>
 
-
-  <!-- =========================================
-       MAIN CONTENT
-  ========================================== -->
-
   <main>
-
-    <!-- =======================================
-         HERO
-    ======================================== -->
-
     <section class="hero">
-
       <div class="hero-content">
-
-        <p class="eyebrow">
-          A student-built travel guide
-        </p>
-
-        <h1>
-          Find your next
-          <span>Philippine</span>
-          adventure.
-        </h1>
-
+        <p class="eyebrow">A student-built travel guide</p>
+        <h1>Find your next <span>Philippine</span> adventure.</h1>
         <p class="hero-text">
-
-          Explore beaches, mountains, food destinations, culture and city escapes through
-          a lightweight website powered by a local JSON data source.
-
+          Explore beaches, mountains, food destinations, culture, and city escapes
+          through a lightweight guide built for discovering the Philippines.
         </p>
-
-
         <div class="hero-actions">
-
-          <a
-            class="button button-primary"
-            href="explore.html">
-
-            Explore destinations
-
-          </a>
-
-          <a
-            class="button button-secondary"
-            href="plan.html">
-
-            Build a trip
-
-          </a>
-
+          <a class="button button-primary" href="explore.html">Explore destinations</a>
+          <a class="button button-secondary" href="wonder-plan.html">Build a trip</a>
         </div>
-
       </div>
 
-
-      <!-- Featured Destination -->
-
-      <div
-        class="hero-card"
-        aria-label="Featured destination">
-
-        <div
-          class="hero-art"
-          role="img"
-          aria-label="Stylized Philippine island landscape">
-
-          <span class="sun"></span>
-
-          <span class="island island-one"></span>
-
-          <span class="island island-two"></span>
-
-          <span class="wave wave-one"></span>
-
-          <span class="wave wave-two"></span>
-
-        </div>
-
-
+      <article class="hero-card">
+        <img src="images/hero-philippines.svg"
+             alt="Stylized Philippine island landscape with mountains, sea, and sun"
+             width="800" height="520">
         <div class="hero-card-body">
-
-          <p class="card-kicker">
-            Featured
-          </p>
-
-          <h2>
-            El Nido, Palawan
-          </h2>
-
-          <p>
-            Lagoon views, limestone cliffs and island-hopping adventures.
-          </p>
-
-          <a href="explore.html#destination-grid">
-            See the collection →
-          </a>
-
+          <p class="card-kicker">Featured destination</p>
+          <h2>El Nido, Palawan</h2>
+          <p>Lagoon views, limestone cliffs, and island-hopping adventures.</p>
+          <a href="explore.html#destination-grid">See the collection →</a>
         </div>
-
-      </div>
-
+      </article>
     </section>
-
-
-    <!-- =======================================
-         WHY WANDERPH
-    ======================================== -->
 
     <section class="section section-soft">
-
       <div class="section-heading">
-
         <div>
-
-          <p class="eyebrow">
-            Why WanderPH?
-          </p>
-
-          <h2>
-            Simple information. Better decisions.
-          </h2>
-
+          <p class="eyebrow">Why WanderPH?</p>
+          <h2>Simple information. Better decisions.</h2>
         </div>
-
-
         <p>
-
-          The site uses semantic HTML, responsive CSS and JavaScript to turn a small dataset
-          into useful travel cards.
-
+          WanderPH combines destination information, responsive design, and JavaScript
+          features to make Philippine travel discovery simple and useful.
         </p>
-
       </div>
-
 
       <div class="feature-grid">
-
         <article class="feature-card">
-
-          <span class="feature-icon">
-            01
-          </span>
-
-          <h3>
-            Discover
-          </h3>
-
-          <p>
-            Browse 15 curated Philippine destinations and filter them by travel style.
-          </p>
-
+          <span class="feature-icon">01</span>
+          <h3>Discover</h3>
+          <p>Browse 15 curated Philippine destinations and filter them by travel style.</p>
         </article>
-
-
         <article class="feature-card">
-
-          <span class="feature-icon">
-            02
-          </span>
-
-          <h3>
-            Compare
-          </h3>
-
-          <p>
-            Open a modal to see each destination's region, type, budget and best season.
-          </p>
-
+          <span class="feature-icon">02</span>
+          <h3>Compare</h3>
+          <p>Open a modal to compare each destination's region, type, budget, and season.</p>
         </article>
-
-
         <article class="feature-card">
-
-          <span class="feature-icon">
-            03
-          </span>
-
-          <h3>
-            Plan
-          </h3>
-
-          <p>
-            Submit your preferences and receive a clean summary on a separate form action page.
-          </p>
-
+          <span class="feature-icon">03</span>
+          <h3>Plan</h3>
+          <p>Submit your preferences and receive a clean summary on a separate action page.</p>
         </article>
-
       </div>
-
     </section>
-
-
-    <!-- =======================================
-         PROJECT REQUIREMENTS
-    ======================================== -->
 
     <section class="section">
-
       <div class="section-heading">
-
         <div>
-
-          <p class="eyebrow">
-            JavaScript-powered
-          </p>
-
-          <h2>
-            How the project meets the brief
-          </h2>
-
+          <p class="eyebrow">JavaScript-powered</p>
+          <h2>How the project meets the brief</h2>
         </div>
-
       </div>
-
 
       <div class="requirement-list">
-
-        <div>
-
-          <strong>
-            Fetch API
-          </strong>
-
-          <span>
-            Loads destination data asynchronously from
-            <code>data/destinations.json</code>.
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Dynamic DOM
-          </strong>
-
-          <span>
-            Generates destination cards instead of hard-coding 15 repeated cards.
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Local storage
-          </strong>
-
-          <span>
-            Remembers the visitor's favorite destinations in their browser.
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>
-            Modal dialog
-          </strong>
-
-          <span>
-            Shows detailed destination information with keyboard-friendly controls.
-          </span>
-
-        </div>
-
+        <article>
+          <strong>Fetch API</strong>
+          <span>Loads destination data asynchronously from <code>data/destinations.json</code>.</span>
+        </article>
+        <article>
+          <strong>Dynamic DOM</strong>
+          <span>Creates destination cards from data instead of hard-coding repeated cards.</span>
+        </article>
+        <article>
+          <strong>Local storage</strong>
+          <span>Remembers favorite destinations in the visitor's browser.</span>
+        </article>
+        <article>
+          <strong>Modal dialog</strong>
+          <span>Displays additional destination details without leaving the Explore page.</span>
+        </article>
       </div>
-
     </section>
-
   </main>
 
-
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
-
   <footer class="site-footer">
-
-    <p>
-      ©
-      <span id="year"></span>
-      WanderPH. Built with HTML, CSS and JavaScript.
-    </p>
-
-    <a href="wonder-plan.html">
-      Start planning →
-    </a>
-
+    <div>
+      <p>© <span id="currentyear"></span> WanderPH — Justin Diaz</p>
+      <p>Philippines</p>
+    </div>
+    <p id="lastModified"></p>
   </footer>
-
-
 </body>
-
 </html>

@@ -1,69 +1,48 @@
-# WanderPH — Individual Website Project
+# WanderPH — WDD231 Final Project
 
-WanderPH is an original three-page website concept created from the provided course requirements.
+WanderPH is a responsive Philippine destination explorer built with semantic HTML, custom CSS, and JavaScript modules.
 
 ## Pages
+- `index.html` — Home
+- `explore.html` — 15 dynamically generated destinations
+- `wonder-plan.html` — GET form using URL Search Params
+- `thank-you.html` — form action page that displays submitted values
 
-- `index.html` — landing/home page
-- `explore.html` — dynamic destination explorer
-- `plan.html` — HTML trip-planning form
-- `form-action.html` — form action/results page (does not count toward the 3-page requirement)
+## WDD231 features
+- Responsive hamburger navigation and desktop flex navigation
+- 15+ dynamic destination records loaded with Fetch from `data/destinations.json`
+- Search and filter using array methods
+- Local Storage favorites
+- Native modal dialog
+- ES Modules (`import` / `export`)
+- Async Fetch with `try/catch`
+- Template literals and DOM manipulation
+- Responsive grid layouts
+- Google Fonts
+- Meta description, author, and Open Graph metadata
+- Optimized local SVG assets
+- `styles/small.css` followed by `styles/large.css`
+- `images`, `styles`, `scripts`, and `data` folders
+- Form action page using `URLSearchParams`
 
-## Data source
+## Local testing
+Run the project through VS Code Live Server or another local HTTP server. The Fetch API may not work correctly if HTML files are opened directly with `file://`.
 
-`data/destinations.json` contains 15 destinations. `js/main.js` uses the Fetch API with `async/await` and `try/catch` to load the file.
+## Final testing
+Before submission:
+1. Check every page for JavaScript console errors.
+2. Run the WDD231 page audit on every page.
+3. Run W3C HTML validation on every page.
+4. Run W3C CSS validation on both CSS files.
+5. Run Lighthouse in an incognito/private window in Mobile and Desktop modes.
+6. Check Accessibility, Best Practices, and SEO scores.
+7. Test the hamburger menu on a narrow viewport.
+8. Test search, filters, favorites, and modal on Explore.
+9. Submit the Wander Plan form and verify the values appear on `thank-you.html`.
+10. Record the required video with your face visible and your screen showing the required JavaScript demonstrations.
 
-Each destination contains more than four data properties, including:
-
-- name
-- region
-- province
-- type
-- budget
-- bestSeason
-- description
-- highlight
-
-## Requirement checklist
-
-- Semantic HTML with header, nav, main and footer
-- Three main website pages
-- Responsive navigation with hamburger menu
-- Responsive layout down to 320px
-- No horizontal scrolling
-- Original HTML/CSS/JavaScript; no framework or site builder
-- Fetch API + `try/catch`
-- 15 dynamically generated items
-- Four or more data properties displayed across each destination
-- `localStorage` for favorite destinations and planner preference
-- Accessible `<dialog>` modal
-- DOM selection and event handling
-- Array methods: `filter`, `find`, `map`
-- HTML form + separate form action page
-- Descriptive page titles
-- Favicon
-- No external images required, keeping the project lightweight
-
-## Running locally
-
-Because the project uses `fetch()` for a local JSON file, open it through a local development server instead of double-clicking the HTML file.
-
-For VS Code, you can use a simple local server such as Live Server, or run:
-
-```bash
-python -m http.server
-```
-
-Then visit the local address shown by the server.
-
-## GitHub Pages
-
-Upload the entire `wanderph-final-project` folder into your required `wdd231` repository subfolder, such as:
-
-`final/`
-
-or
-
-`finalproject/`
-
-Then update the "Final" link in your Week 1 navigation to the GitHub Pages URL for the project.
+## Video demonstration order
+1. Show `data/destinations.json` and the Explore page output.
+2. Show the `fetch()` call and its `try/catch` asynchronous loading.
+3. Show `destination-utils.js` exporting functions and `explore.js` importing them.
+4. Demonstrate search/filter, favorites, and modal output.

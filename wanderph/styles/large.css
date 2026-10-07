@@ -1,15 +1,7 @@
-/* =========================================
-   WANDERPH - LARGE SCREEN STYLES
-========================================= */
-
 @media (min-width: 900px) {
-
-  /* =======================================
-     HEADER
-  ======================================== */
-
   .site-header {
-    padding: 1.1rem 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .menu-toggle {
@@ -17,137 +9,74 @@
   }
 
   .site-nav {
-    position: static;
-
-    display: flex;
-    flex-direction: row;
-
-    padding: 0;
-
+    align-items: center;
     background: transparent;
     border: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    padding: 0;
+    position: static;
   }
-
-  .nav-link {
-    padding: 0.5rem 0.8rem;
-  }
-
-
-  /* =======================================
-     HERO
-  ======================================== */
 
   .hero {
-    grid-template-columns: 1.15fr 0.85fr;
-
     align-items: center;
-
     gap: 4rem;
-
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
-  .hero-card {
-    max-width: 500px;
-    justify-self: end;
-  }
-
-  .hero-art {
-    height: 300px;
-  }
-
-
-  /* =======================================
-     SECTIONS
-  ======================================== */
-
-  .section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 650px;
   }
 
   .section-heading {
-    grid-template-columns: 1fr 1fr;
-
     align-items: end;
-
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
   }
-
-  .section-heading > p {
-    justify-self: end;
-  }
-
-
-  /* =======================================
-     FEATURE GRID
-  ======================================== */
 
   .feature-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .feature-card {
-    min-height: 220px;
+  .requirement-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .controls-panel {
+    align-items: end;
+    grid-template-columns: 1.2fr 1fr 0.9fr auto;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .plan-layout {
+    align-items: start;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.7fr);
+  }
+
+  .form-card,
+  .tips-card,
+  .action-card {
     padding: 2rem;
   }
 
-
-  /* =======================================
-     REQUIREMENT LIST
-  ======================================== */
-
-  .requirement-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .requirement-list > div {
-    min-height: 130px;
-
-    padding: 1.5rem;
-
-    grid-template-columns: 140px 1fr;
-  }
-
-
-  /* =======================================
-     FOOTER
-  ======================================== */
-
   .site-footer {
     flex-direction: row;
-
-    align-items: center;
     justify-content: space-between;
-
-    padding: 2rem 5%;
-
     text-align: left;
   }
-
 }
 
-
 @media (min-width: 1200px) {
-
-  .site-header {
-    padding-left: 7%;
-    padding-right: 7%;
-  }
-
-  main {
-    width: min(1200px, 86%);
-  }
-
-  .hero h1 {
-    font-size: 4.8rem;
-  }
-
   .hero {
-    gap: 6rem;
+    gap: 5rem;
   }
 
+  .hero-card {
+    transform: rotate(1deg);
+    transition: transform 0.3s ease;
+  }
+
+  .hero-card:hover {
+    transform: rotate(0deg) translateY(-4px);
+  }
 }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Build a Philippine travel plan with WanderPH by choosing a destination, travel style, budget, season, and number of travelers.">
+  <meta name="author" content="Justin Diaz">
+  <title>Wander Plan | WanderPH</title>
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Wander Plan | WanderPH">
+  <meta property="og:description" content="Build a Philippine travel plan with WanderPH by choosing a destination, travel style, budget, season, and travelers.">
+  <meta property="og:image" content="https://justinbyu.github.io/wdd231/wanderph/images/og-image.svg">
+  <meta property="og:url" content="https://justinbyu.github.io/wdd231/wanderph/wonder-plan.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="WanderPH home">
+      <img src="images/favicon.svg" alt="" width="42" height="42">
+      <span>Wander<span class="brand-highlight">PH</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Open navigation</span>
+      ☰
+    </button>
+
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="explore.html">Explore</a>
+      <a class="nav-link active" href="wonder-plan.html" aria-current="page">Wander Plan</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Plan your adventure</p>
+      <h1>Build your <span>Wander Plan.</span></h1>
+      <p>
+        Tell us what kind of Philippine adventure you want. Your answers will
+        be displayed on a separate form action page.
+      </p>
+    </section>
+
+    <div class="plan-layout">
+      <section class="form-card">
+        <h2>Travel preferences</h2>
+
+        <form action="thank-you.html" method="get">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Your name <span class="required">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address <span class="required">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="destination">Destination <span class="required">*</span></label>
+              <select id="destination" name="destination" required>
+                <option value="" selected disabled>Select a destination</option>
+                <option value="El Nido, Palawan">El Nido, Palawan</option>
+                <option value="Boracay">Boracay</option>
+                <option value="Cebu">Cebu</option>
+                <option value="Bohol">Bohol</option>
+                <option value="Siargao">Siargao</option>
+                <option value="Banaue">Banaue</option>
+                <option value="Baguio">Baguio</option>
+                <option value="Manila">Manila</option>
+                <option value="Davao City">Davao City</option>
+                <option value="Vigan">Vigan</option>
+                <option value="Coron, Palawan">Coron, Palawan</option>
+                <option value="Camiguin">Camiguin</option>
+                <option value="Sagada">Sagada</option>
+                <option value="Dumaguete">Dumaguete</option>
+                <option value="Puerto Princesa">Puerto Princesa</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="style">Travel style <span class="required">*</span></label>
+              <select id="style" name="style" required>
+                <option value="" selected disabled>Select a travel style</option>
+                <option value="Beach & Island">Beach & Island</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Culture & History">Culture & History</option>
+                <option value="Food & City">Food & City</option>
+                <option value="Nature & Mountains">Nature & Mountains</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Estimated budget <span class="required">*</span></label>
+              <select id="budget" name="budget" required>
+                <option value="" selected disabled>Select your budget</option>
+                <option value="₱1,000–₱5,000">₱1,000–₱5,000</option>
+                <option value="₱5,000–₱10,000">₱5,000–₱10,000</option>
+                <option value="₱10,000–₱20,000">₱10,000–₱20,000</option>
+                <option value="₱20,000+">₱20,000+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="season">Preferred season</label>
+              <select id="season" name="season">
+                <option value="No preference">No preference</option>
+                <option value="Dry season">Dry season</option>
+                <option value="Summer">Summer</option>
+                <option value="Rainy season">Rainy season</option>
+                <option value="Holiday season">Holiday season</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="travelers">Number of travelers</label>
+              <input id="travelers" name="travelers" type="number" min="1" max="20" value="1">
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="notes">Additional preferences</label>
+              <textarea id="notes" name="notes" placeholder="Tell us about activities, food, or experiences you want."></textarea>
+            </div>
+          </div>
+
+          <button class="button button-primary form-submit" type="submit">
+            Create My Wander Plan →
+          </button>
+        </form>
+      </section>
+
+      <aside class="tips-card">
+        <p class="eyebrow">Quick guide</p>
+        <h2>Plan with purpose.</h2>
+        <ol>
+          <li><strong>Choose a place.</strong> Start with a destination that fits your interests.</li>
+          <li><strong>Pick your style.</strong> Match the trip to the experience you want.</li>
+          <li><strong>Set your budget.</strong> Use a realistic spending range.</li>
+          <li><strong>Explore.</strong> Compare more places before making your final plan.</li>
+        </ol>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>© <span id="currentyear"></span> WanderPH — Justin Diaz</p>
+      <p>Philippines</p>
+    </div>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

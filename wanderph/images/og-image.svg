@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#17221d"/>
+<circle cx="970" cy="120" r="75" fill="#f5c96a"/>
+<path d="M0 465C170 390 290 420 455 455c175 37 330-70 745-28v203H0z" fill="#2e765d"/>
+<path d="M0 525c230-70 390 5 580 25 210 22 360-65 620-45v125H0z" fill="#1e8f6f"/>
+<text x="80" y="210" fill="#fff" font-family="Arial,sans-serif" font-size="88" font-weight="700">WanderPH</text>
+<text x="84" y="285" fill="#8bd5b8" font-family="Arial,sans-serif" font-size="35">Discover the Philippines</text>
+<text x="84" y="345" fill="#dce6e0" font-family="Arial,sans-serif" font-size="24">Beaches • Mountains • Food • Culture • Adventure</text>
+</svg>

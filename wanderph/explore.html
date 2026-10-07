@@ -3,84 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Philippine destinations with WanderPH.">
+  <meta name="description" content="Explore 15 Philippine destinations with WanderPH. Filter places by travel style, save favorites, and open detailed destination information.">
+  <meta name="author" content="Justin Diaz">
   <title>Explore | WanderPH</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Explore Philippine Destinations | WanderPH">
+  <meta property="og:description" content="Explore 15 Philippine destinations with WanderPH. Filter places, save favorites, and view useful travel details.">
+  <meta property="og:image" content="https://justinbyu.github.io/wdd231/wanderph/images/og-image.svg">
+  <meta property="og:url" content="https://justinbyu.github.io/wdd231/wanderph/explore.html">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
-  <script src="scripts/main.js" defer></script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/explore.js"></script>
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="WanderPH home">
-      <span class="brand-mark">W</span>
-      <span>Wander<span>PH</span></span>
+      <img src="images/favicon.svg" alt="" width="42" height="42">
+      <span>Wander<span class="brand-highlight">PH</span></span>
     </a>
+
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
       <span class="sr-only">Open navigation</span>
       ☰
     </button>
+
     <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link active" href="explore.html" aria-current="page">Explore</a>
-      <a class="nav-link" href="plan.html">Plan a Trip</a>
+      <a class="nav-link" href="wonder-plan.html">Wander Plan</a>
     </nav>
   </header>
 
   <main>
-    <section class="page-banner">
+    <section class="page-intro">
+      <p class="eyebrow">Discover more</p>
+      <h1>Find your next <span>Philippine adventure.</span></h1>
+      <p>
+        Search the collection, filter destinations by travel style, save favorites,
+        and open each card for more information.
+      </p>
+    </section>
+
+    <section class="controls-panel" aria-labelledby="filter-heading">
       <div>
-        <p class="eyebrow">15 destinations</p>
-        <h1>Explore the Philippines</h1>
-        <p>Search, filter and open any destination for more details.</p>
+        <h2 id="filter-heading">Explore destinations</h2>
+        <p id="results-count" class="muted-text">Loading destinations...</p>
       </div>
-      <div class="stats-card">
-        <strong id="destination-count">15</strong>
-        <span>destinations loaded</span>
+
+      <div class="control-group">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Search a destination..." autocomplete="off">
       </div>
+
+      <div class="control-group">
+        <label for="style-filter">Travel style</label>
+        <select id="style-filter">
+          <option value="all">All styles</option>
+          <option value="beach">Beach & Island</option>
+          <option value="adventure">Adventure</option>
+          <option value="culture">Culture & History</option>
+          <option value="food">Food & City</option>
+          <option value="nature">Nature & Mountains</option>
+        </select>
+      </div>
+
+      <button id="favorites-only" class="filter-button" type="button" aria-pressed="false">
+        Show favorites
+      </button>
     </section>
 
-    <section class="section" id="destination-grid">
-      <div class="toolbar">
-        <label class="search-box">
-          <span>Search destinations</span>
-          <input id="search-input" type="search" placeholder="Try “beach” or “Cebu”" autocomplete="off">
-        </label>
+    <section id="destination-grid" class="destination-grid" aria-live="polite" aria-label="Philippine destinations"></section>
 
-        <label class="filter-box">
-          <span>Travel style</span>
-          <select id="type-filter">
-            <option value="all">All styles</option>
-            <option value="Beach">Beach</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Culture">Culture</option>
-            <option value="City">City</option>
-            <option value="Food">Food</option>
-            <option value="Nature">Nature</option>
-          </select>
-        </label>
+    <p id="empty-state" class="empty-state" hidden>
+      No destinations match your search. Try another keyword or filter.
+    </p>
+
+    <dialog id="destination-dialog" class="destination-dialog">
+      <div class="dialog-content">
+        <button id="dialog-close" class="dialog-close" type="button" aria-label="Close destination details">×</button>
+        <div id="dialog-body"></div>
       </div>
-
-      <p id="loading-message" class="status-message" role="status">Loading destinations…</p>
-      <div id="destination-list" class="destination-grid" aria-live="polite"></div>
-      <p id="empty-message" class="status-message hidden">No destinations match your search.</p>
-    </section>
+    </dialog>
   </main>
 
-  <dialog id="destination-modal" class="destination-modal" aria-labelledby="modal-title">
-    <div class="modal-header">
-      <div>
-        <p id="modal-type" class="eyebrow"></p>
-        <h2 id="modal-title">Destination</h2>
-      </div>
-      <button id="modal-close" class="icon-button" type="button" aria-label="Close destination details">×</button>
-    </div>
-    <div id="modal-content"></div>
-  </dialog>
-
   <footer class="site-footer">
-    <p>© <span id="year"></span> WanderPH.</p>
-    <a href="plan.html">Plan a trip →</a>
+    <div>
+      <p>© <span id="currentyear"></span> WanderPH — Justin Diaz</p>
+      <p>Philippines</p>
+    </div>
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>

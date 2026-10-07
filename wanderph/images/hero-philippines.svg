@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<rect width="800" height="520" fill="#d9f1e7"/>
+<circle cx="650" cy="105" r="60" fill="#f5c96a"/>
+<path d="M0 335c100-70 190-55 285 0 90 52 185-70 290-30 95 37 155-35 225-20v235H0z" fill="#2e765d"/>
+<path d="M0 390c120-55 220 10 330 0 145-12 250-60 470-5v135H0z" fill="#1e8f6f"/>
+<path d="M0 455c150-55 280 8 420-10 145-20 250 5 380-18v93H0z" fill="#168f91"/>
+<path d="M0 475c140-45 265 15 390-2 170-22 280 15 410-8v55H0z" fill="#eaf9f4"/>
+<text x="48" y="76" fill="#17221d" font-family="Arial,sans-serif" font-size="30" font-weight="700">WANDERPH</text>
+<text x="50" y="112" fill="#176e53" font-family="Arial,sans-serif" font-size="19">PHILIPPINES</text>
+</svg>
